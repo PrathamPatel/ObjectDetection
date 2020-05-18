@@ -29,7 +29,8 @@ We need to set the environmental path variables:
 I have also included a **python script** to compile the **protobuf** files and creates a **name_pb2.py** file from every **name.proto** file in the `object_detection\protos` folder.
 
  run this command from the **`/research`**directory:
- `python use_protobuf.py  .\object_detection\protos\ .\bin\protoc`
+ 
+  `python use_protobuf.py  .\object_detection\protos\ .\bin\protoc`
 
 3. After that, run the following commands one after the other from the **`\research`** directory:
  
@@ -48,7 +49,7 @@ I have also included a **python script** to compile the **protobuf** files and c
 
  Run all the cells of the notebook and check if you’re getting an output with an image of a dog with bounding boxes around it. If you are, you have successfully configured the API, otherwise, please check if the above steps have been carried out successfully.
 
-#Now to use our own dataset:
+## Now to use our own dataset:
 
 1. **Preparing our dataset:** Gather as many different and variety of images consisting of the objects that you want to detect. Create a directory named images inside the **`\research`** directory and store about **80%** of the images into a **`images\train`** directory  and **20%** of the images into **`images\test`** directory. The more images you have, the better the accuracy you shall have.
 
@@ -96,7 +97,7 @@ I have also included a **python script** to compile the **protobuf** files and c
 
 Please make sure the label map ID numbers are the same as what was defined in the **`generate_tfrecord.py`** file.
 
-###Next steps for configuration:
+## Next steps for configuration:
 
 5. We need a model i.e, algorithm to train our classifier. In this project we are going to use **`faster_rcnn_inception model`**. Tensorflow’s object detection API comes with a huge number of models. Navigate to **`object_detection\samples\configs`**.
 In this location you can find a lot of config files to all the models provided by the API.
@@ -143,7 +144,7 @@ num_examples: 10
 **`label_map_path:`** `“C:/(Path to folder)/models/research/object_detection/training/labelmap.pbtxt”`
 
 
-###Finally, we can train our model:
+## Finally, we can train our model:
 
 1. You can find a file named **`train.py`** at the location **`object_detection/legacy/`**.
 
@@ -174,7 +175,7 @@ Continue the training process until the **loss** is **less than or equal to 0.1*
  This creates a **`frozen_inference_graph.pb`** file in the **`\object_detection\inference_graph`** folder. The **.pb** file contains the **object detection classifier**. 
 
 
-##All that's left to do is test our model out.
+## All that's left to do is test our model out.
 
 In the **`object_detection`** directory there is a file named **`Trial.py`** where you can replace the `IMAGE_NAME` variable with the path to your own image. 
 
