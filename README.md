@@ -1,4 +1,4 @@
-# Hello, this is a custom object detection program guide to detect custom set of objects.
+# Hello, this is a custom object detection program guide to detect custom set of object with Tensorflow Object Detection API.
 
 ----
 ## First things first.
@@ -15,6 +15,9 @@
 7. `pip install pandas`.
 8. `pip install opencv-python`.
 9. `pip install tensorflow`.
+
+[This](https://www.geeksforgeeks.org/ml-training-image-classifier-using-tensorflow-object-detection-api/) tutorial was really helpful in understanding the process. Yet there were challenges along the way due to different versions, but nothing some extra research can't help with ;)
+
 ----
 ## STEPS I TOOK TO GET IT WORKING:
 1. The **object_detection** folder can be found in the **research** directory. Navigate to the **research** directory.
